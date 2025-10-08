@@ -1,5 +1,10 @@
 namespace DSoft.Maui.Controls;
 
+/// <summary>
+/// Selectable Content View for use in CollectionViews
+/// Implements the <see cref="Microsoft.Maui.Controls.ContentView" />
+/// </summary>
+/// <seealso cref="Microsoft.Maui.Controls.ContentView" />
 public abstract class SelectableContentView : ContentView
 {
     #region ForegroundColor
@@ -26,6 +31,10 @@ public abstract class SelectableContentView : ContentView
         }
     }
 
+    /// <summary>
+    /// Called when the foreground color changes.
+    /// </summary>
+    /// <param name="color">The color.</param>
     protected abstract void UpdateForForegroundColorChange(Color color);
 
     #endregion
@@ -51,7 +60,10 @@ public abstract class SelectableContentView : ContentView
         }
     }
 
-
+    /// <summary>
+    /// Called when the foreground Secondary color changes.
+    /// </summary>
+    /// <param name="color">The color.</param>
     protected abstract void UpdateForForegroundSecondaryColorChange(Color color);
 
     #endregion
@@ -78,6 +90,10 @@ public abstract class SelectableContentView : ContentView
         }
     }
 
+    /// <summary>
+    /// Called when the highlight color changes.
+    /// </summary>
+    /// <param name="color">The color.</param>
     protected abstract void UpdateForHighlightColorChange(Color color);
 
     #endregion
@@ -103,11 +119,15 @@ public abstract class SelectableContentView : ContentView
         }
     }
 
+    /// <summary>
+    /// Called when the selection color changes.
+    /// </summary>
+    /// <param name="color">The color.</param>
     protected abstract void UpdateForSelectionColorChange(Color color);
 
     #endregion
 
-    #region Hightlight Text Color
+    #region Highlight Text Color
 
     public static readonly BindableProperty HighlightTextColorProperty = BindableProperty.Create(nameof(HighlightTextColor), typeof(Color), typeof(SelectableContentView), null, propertyChanged: OnHighlightTextColorChanged);
 
@@ -128,6 +148,10 @@ public abstract class SelectableContentView : ContentView
         }
     }
 
+    /// <summary>
+    /// Called when the highlight text color changes.
+    /// </summary>
+    /// <param name="color">The color.</param>
     protected abstract void UpdateForHighlightTextColorChange(Color color);
 
     #endregion
