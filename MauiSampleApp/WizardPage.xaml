@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSampleApp.WizardPage"
+             xmlns:controls="http://dsoft.maui/schemas/controls"
+             xmlns:pages="clr-namespace:MauiSampleApp.WizardPages"
+             xmlns:local="clr-namespace:MauiSampleApp"
+             x:DataType="local:WizardPageViewModel"
+             Title="WizardPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Close" Clicked="OnCloseClicked" />
+    </ContentPage.ToolbarItems>
+    <Grid RowDefinitions="*, Auto">
+
+        <controls:WizardView Grid.Row="0" x:Name="wzrControl" EnableLooping="{Binding EnableLooping}" Margin="5" ChildCount="{Binding ChildCount}" Position="{Binding Position}" >
+            <pages:WizardView1 />
+            <pages:WizardView2 />
+            <pages:WizardView3 />
+        </controls:WizardView>
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto, *, Auto" Margin="10,0,10,0">
+            
+            <Button Text="Back" Grid.Column="0" Command="{Binding BackCommand}" />
+
+            <Button Text="Next" Grid.Column="2" Command="{Binding NextCommand}" />
+        </Grid>
+    </Grid>
+
+</ContentPage>

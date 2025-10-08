@@ -46,6 +46,14 @@
             await Navigation.PushModalAsync(new NavigationPage(dlg));
 
         }
+
+        private async void OnWizardPageClicked(object sender, EventArgs e)
+        {
+            var dlg = new WizardPage();
+
+            await Navigation.PushModalAsync(new NavigationPage(dlg));
+
+        }
     }
 
 }
