@@ -1,5 +1,7 @@
 using DSoft.Maui.Controls.Events;
 
+// Based on: https://redth.codes/building-a-step-by-step-wizard-control-in-net-maui
+
 namespace DSoft.Maui.Controls;
 
 public class WizardControl : Grid
@@ -80,7 +82,7 @@ public class WizardControl : Grid
         var nextIndex = c - 1;
 
         if (nextIndex < 0)
-            nextIndex = 0;
+            nextIndex = Children.Count - 1;
         if (currentIndex == nextIndex)
             return;
 
@@ -90,7 +92,7 @@ public class WizardControl : Grid
         // Prepare the 'next' view to show, moving it out of 
         // view, by setting its x translation to the right of
         // our container (container's width)
-        nextView.TranslationX = this.Width;
+        nextView.TranslationX = -this.Width;
         // Make the 'next' view visible so we see it sliding in
         // now that it's translated outside of the container view and not 'seen'
         nextView.IsVisible = true;
