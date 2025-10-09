@@ -19,7 +19,8 @@ steps:
   displayName: 'Install .NET sdk'
   inputs:
     packageType: 'sdk'
-    version: $(DotNetVersion)
+    version: '$(DotNetVersion)'
+    includePreviewVersions: true
       
 - task: NuGetToolInstaller@1
   displayName: Install Latest Nuget
