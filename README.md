@@ -21,8 +21,12 @@ Features:
   - Bindable multi-ring chart with center view content
 - `SingleRingChartView`
   - Simple single ring chart view with center view content
+- `SelectableContentView`
+    - Content View with bindable properties for use in a CollectionView allow for backgroup and text color updates
+- `WizardView`
+    - Bindable Wizard view for wizard dialogs
 
-This packages also just contains `PanPinchContainer` based on `PanPinchContainer` by [CodingOctocat](https://github.com/CodingOctocat/MauiPanPinchContainer)
+This packages also contains `PanPinchContainer` based on `PanPinchContainer` by [CodingOctocat](https://github.com/CodingOctocat/MauiPanPinchContainer)
 
  - `PanPinchContainer`
     - Zoom in and out and pan around an image 
